@@ -1,6 +1,5 @@
 import math
 
-
 def distance(x1, y1, x2, y2):
     return math.hypot(x2 - x1, y2 - y1)
 
@@ -47,5 +46,5 @@ def check_solution(travel_list, df, speed=30.):
         f"Time left after last bank: {t_remaining}\n"
         f"Distance to (0,0) helipad: {dist}\n"
     )
-    print(f"Time Remaining: {final_t}")
-    return score
+    # print(f"Time Remaining: {final_t}")
+    return score, final_t

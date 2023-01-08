@@ -1,6 +1,8 @@
 import pandas as pd
 from scipy.spatial.distance import pdist, squareform
 
+from utils.check_solution import check_solution
+
 
 def nearest_neighbour_path(data, start_position=[0,0]):
     """Find a route between all given coordinates based on the nearest neighbour of each point.
@@ -75,4 +77,4 @@ def nearest_neighbour_path(data, start_position=[0,0]):
     # create a route with the original indices
     route = list(map(lambda x: data['index'].iloc[x], visited[1:]))
 
-    return route
+    return route[::1]
