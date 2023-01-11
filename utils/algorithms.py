@@ -129,7 +129,7 @@ def inc_nearest_neighbour_path(df, start=0, increments=0.01):
     info = {'money_earned' : best_money,
             'time_remaining' : f'{round(best_time_remaining, 2)} hours',
             'banks_visited' : len(best_route),
-            'lowest_bank_score' : round(start+increments, 2),
+            'lowest_bank_score' : round(start-increments, 3),
             'total_path_length' : total_distance,
             'best_route' : best_route
             }
